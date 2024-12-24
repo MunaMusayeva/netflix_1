@@ -5,6 +5,7 @@ import Trending from './components/Trending'
 import CustomSelect from './components/CustomSelect'
 import ReasonsToJoin from './components/ReasonsToJoin'
 import FAQ from './components/FAQ'
+import Footer from './components/Footer'
 
 const Landing = () => {
   return (
@@ -14,6 +15,7 @@ const Landing = () => {
       <Trending />
       <ReasonsToJoin/>
       <FAQ/>
+      <Footer/>
     </>
   )
 }
