@@ -12,31 +12,35 @@ const Footer = () => {
             <a href="#" className="block mb-2 hover:underline">
               FAQ
             </a>
-            
-            <a href="#" className="block mb-2 hover:underline">
-              Privacy
-            </a>
-            <a href="#" className="block mb-2 hover:underline">
-              Speed Test
-            </a>
+
             <a href="#" className="block mb-2 hover:underline">
               Help Center
             </a>
+            <a href="#" className="block mb-2 hover:underline">
+              Account
+            </a>
+            <a href="#" className="block mb-2 hover:underline">
+              Media Center
+            </a>
+
             <a href="#" className="block mb-2 hover:underline">
               Investor Relations
             </a>
             <a href="#" className="block mb-2 hover:underline">
               Jobs
             </a>
+                        
+            <a href="#" className="block mb-2 hover:underline">
+              Privacy
+            </a>
+
             <a href="#" className="block mb-2 hover:underline">
               Cookie Preferences
             </a>
             <a href="#" className="block mb-2 hover:underline">
               Legal Notices
             </a>
-            <a href="#" className="block mb-2 hover:underline">
-              Account
-            </a>
+
             <a href="#" className="block mb-2 hover:underline">
               Ways to Watch
             </a>
@@ -46,8 +50,9 @@ const Footer = () => {
             <a href="#" className="block mb-2 hover:underline">
               Only on Netflix
             </a>
+
             <a href="#" className="block mb-2 hover:underline">
-              Media Center
+              Speed Test
             </a>
             <a href="#" className="block mb-2 hover:underline">
               Terms of Use
