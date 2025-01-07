@@ -5,7 +5,7 @@ const FAQItem = ({ item, openAccordion, setOpenAccordion }) => {
         <button onClick={() => {
             setOpenAccordion(prevState => prevState !== item.id ? item.id : null)
         }} className='bg-[#2D2D2D] w-full   '>
-            <div className="flex items-center justify-between  border-black  border-b-[1px] px-[24px] py-[28px] ">
+            <div className="flex items-center justify-between  border-black hover:bg-white/10  border-b-[1px] px-[24px] py-[28px] ">
                 <h3 className="text-[24px] text-white font-semibold ">
                     {item.title}
                 </h3>

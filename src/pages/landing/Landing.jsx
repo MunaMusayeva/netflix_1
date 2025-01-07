@@ -7,6 +7,7 @@ import ReasonsToJoin from './components/ReasonsToJoin'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 
+
 const Landing = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Landing = () => {
       <ReasonsToJoin/>
       <FAQ/>
       <Footer/>
+
     </>
   )
 }

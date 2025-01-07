@@ -56,6 +56,14 @@ const FAQ = () => {
           />
         ))}
       </div>
+      <div className='text-center mt-[70px] '>
+
+        <h3 className="font-medium text-[17px] mt-[25px] text-white ">Ready to watch? Enter your email to create or restart your membership.</h3>
+        <div className='w-fit h-[56px] mt-[15px] px-[11.5rem]  rounded flex mb-[70px]'>
+          <input placeholder="Email address" className='opacity-90 pl-4 w-[561px] h-[56px] rounded text-left border-[1px] border-zinc-400 focus:outline-white outline-2 outline-offset-2 text-white   relative bg-zinc-900 " ' type="text" />
+          <button className='bg-[#e50914]  w-[218px] ml-2 flex gap-1 hover:bg-[#ce272ffb] transition duration-100 ease-in justify-center items-center text-white font-medium text-[30px] rounded '>Get Started  <svg xmlns="http://www.w3.org/2000/svg" className="" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg></button>
+        </div>
+      </div>
     </div>
   );
 };

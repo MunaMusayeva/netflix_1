@@ -15,7 +15,7 @@ const CustomSelect = ({ options, selectedOption, setSelectedOption, logo }) => {
         setClicked(false)
       }} onChange={handleChange} onClick={() => {
         setClicked(true)
-      }} className='w-full h-full opacity-0 h-[33px] ' name="" id="">
+      }} className='w-full h-full opacity-0 ' name="" id="">
 
         {options.map((item, index) => <option className='text-black' value={item}>{item} </option>)}
       </select>
