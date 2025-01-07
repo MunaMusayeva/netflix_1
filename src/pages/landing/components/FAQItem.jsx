@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQItem = ({ item, openAccordion, setOpenAccordion }) => {
     return (
@@ -22,16 +23,30 @@ const FAQItem = ({ item, openAccordion, setOpenAccordion }) => {
                 </svg>
             </div>
 
-            {openAccordion === item.id && (
-                <div className="bg-[#2D2D2D] text-white px-6 py-4">
-                    <p className="text-[24px] leading-7 text-left pb-[">{item.desc.split("[break]")[0]}
-                        <br />
-                        <br />
-                        {item.desc.split("[break]")[1]}
-                    
-                    </p>
-                </div>
-            )}
+            <AnimatePresence initial={false}>
+                { openAccordion === item.id && (
+                    <motion.section
+                        key="content"
+                        initial="collapsed"
+                        animate="open"
+                        exit="collapsed"
+                        variants={{
+                            open: { opacity: 1, height: "auto" },
+                            collapsed: { height: 0 }
+                        }}
+                        transition={{ duration: 0.2, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    >
+                        <div className='px-[24px] py-[28px]'>
+                            <p className='text-left text-[24px] text-white'>
+                                {item.desc.split("[break]")[0]}  
+                                <br />
+                                <br />
+                                 {item.desc.split("[break]")[1]}
+                            </p>
+                        </div>
+                    </motion.section>
+                )}
+            </AnimatePresence>
         </button>
     )
 }
