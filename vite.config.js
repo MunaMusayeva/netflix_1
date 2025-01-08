@@ -10,8 +10,8 @@ export default defineConfig({
       common: "/src/common",
       icons: "/src/assets/icons",
       images: "/src/assets/images",
-      // locales: "/src/locales",
-      // utils: "/src/utils",
+      locales: "/src/locales",
+      utils: "/src/utils",
       pages: "/src/pages"
     },
   },

@@ -1,8 +1,7 @@
 import FormInput from "../common/FormInput"
 import { useEffect, useState } from "react"
 
-const Form = ({ formItems, buttons }) => {
-    const [formData, setFormData] = useState({})
+const Form = ({ headerText, setFormData, formItems, formButtons, formStyle = "flex flex-col pt-12 gap-5 max-w-[400px] mx-auto" }) => {
 
     const handleInputChange = (name, value) => {
         setFormData(prevState => ({
@@ -11,21 +10,21 @@ const Form = ({ formItems, buttons }) => {
         }))
     }
 
-    useEffect(() => {
-        console.log(formData)
-    }, [formData])
-
-
     return (
-        <form className="flex flex-col gap-5 max-w-[400px] mx-auto border p-5 mt-12 rounded-md" action="">
+
+
+        <form className={formStyle} action="">
+            {headerText && <h1 className={headerText.style}>{headerText.title}</h1>}
             {
-                formItems.map(item => <FormInput handleInputChange={handleInputChange} name={item.name} label={item.label} type={item.type} placeholder={item.placeholder} />)
+                formItems.map(item => <FormInput handleInputChange={handleInputChange} name={item.name} label={item.label} type={item.type} placeholder={item.placeholder} inputStyle={item.inputStyle} />)
             }
 
             {
-                buttons.map(button => <button onClick={button.action} className={button.style}>{button.title}</button>)
+                formButtons.map(button => <button onClick={button.action} className={button.style}>{button.title}</button>)
             }
         </form>
+
+
     )
 }
 

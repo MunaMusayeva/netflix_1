@@ -3,13 +3,13 @@ import Form from '../../common/Form'
 import { useNavigate } from "react-router"
 import { themeStore } from '../../common/Store'
 import {useStore} from 'zustand'
-const Login = () => {
+const SignUp = () => {
     const{addAccesToken}=useStore(themeStore)
     const navigate = useNavigate()
     const [formData, setFormData] = useState({})
-    const login = async()=>{
+    const signup = async()=>{
         try{
-            const response = await fetch("https://localhost:5001/api/v1/auth/login",{
+            const response = await fetch("https://localhost:5001/api/v1/auth/signup",{
                 method:"POST",
                 headers:{
                     "Accept":"application/json",
@@ -20,7 +20,6 @@ const Login = () => {
             const data = await response.json()
             if(response.ok){
                 addAccesToken(data.token)
-                navigate('/home')
 
             }
         }catch(error){
@@ -28,6 +27,13 @@ const Login = () => {
         }
     }
     const formItems = [
+        {
+            name: "username",
+            label: "",
+            type: "text",
+            placeholder: "Username",
+            inputStyle: "p-4 bg-transparent border-[1px] border-zinc-400 rounded-[4px] text-white"
+        },
         {
             name: "email",
             label: "",
@@ -47,16 +53,15 @@ const Login = () => {
 
     const formButtons = [
         {
-            title: "Sign in",
+            title: "Sign Up",
             style: "bg-[#E50914] text-white font-medium py-3 rounded-[4px] w-full",
-            action: login
-            
+            action: signup
         },
         {
-            title: "New to Netflix? Sign up now",
+            title: "Already have an account? Sign In",
             style: "text-zinc-300 mt-[25px] w-full",
             action: () => {
-                navigate("/signup")
+                navigate("/login")
             }
         },
         {
@@ -72,7 +77,7 @@ const Login = () => {
             <Form
                 headerText={
                     {
-                        title: "Sign In",
+                        title: "Sign Up",
                         style: "text-white font-bold text-[32px]"
                     }
                 }
@@ -86,4 +91,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default SignUp
