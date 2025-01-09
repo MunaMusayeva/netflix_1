@@ -5,7 +5,7 @@ const ScrollButton = ({ direction }) => {
     const toRight = direction === "right"
 
     return (
-        <button
+        <button 
             onClick={() =>
                 document
                     .querySelector("#movie-card-container")
