@@ -3,7 +3,7 @@ import netflix from "images/NetflixLogo.svg"
 
 const Navbar = ({tabItems,setSelectedTab,selectedTab}) => {
   return (
-    <div className='w-screen absolute top-0 left-0 flex items-center py-[30px] px-[90px] '>
+    <div className='w-screen max-w-[1440px] absolute top-0 flex items-center py-[30px] px-[90px]'>
         <img src={netflix} alt="" />
         <div className='flex items-center gap-[28px] ml-[60px]'>
         {

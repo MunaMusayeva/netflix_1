@@ -43,29 +43,31 @@ const Trending = () => {
 
     return (
         <>
-        <div className='max-w-[1440px] mx-auto px-[9rem] w-full py-20 relative'>
-            <h3 className=' text-white text-2xl font-semibold mb-4'>Trending Now</h3>
-            <CustomSelect selectedOption={selectedOption} setSelectedOption={setSelectedOption} options={options} />
-            
-           
-            <Modal isOpen={isModalOpen} item={item} closeModal={closeModal} />
-        </div>
-        <div className='max-w-[1440px] mx-auto relative '>
-        <ScrollButton direction="left" />
-         <div id="movie-card-container" className='w-full flex  py-5 pl-7  overflow-x-scroll gap-12 no-scrollbar'>
-             {data.map((item, index) =>
-                 <div key={index} onClick={() => handleCardClick(item)}>
-                     <MovieCard className='' setItem={setItem} item={item} index={index} />
-                 </div>
-             )}
-         </div>
-         <ScrollButton direction="right" />
+            <div className=' mx-auto px-[9rem] w-full py-20 '>
+                <h3 className=' text-white text-2xl font-semibold mb-4'>Trending Now</h3>
+                <CustomSelect selectedOption={selectedOption} setSelectedOption={setSelectedOption} options={options} />
 
-        </div>
-         
+              
+                <div id="movie-card-container" className='w-full flex  py-5 pl-7 relative  overflow-x-scroll gap-12 no-scrollbar'>
+                <ScrollButton direction="left" />
+                    {data.map((item, index) =>
+                        <div key={index} onClick={() => handleCardClick(item)}>
+                            <MovieCard className='' setItem={setItem} item={item} index={index} />
+                        </div>
+                    )}
+                <ScrollButton direction="right" />
+                </div>
+                
+
+
+                <Modal isOpen={isModalOpen} item={item} closeModal={closeModal} />
+            </div>
+
+
+
 
         </>
-        
+
 
     )
 }

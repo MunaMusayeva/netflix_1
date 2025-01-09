@@ -5,7 +5,7 @@ const Entry = () => {
     const [selectedLanguage, setSelectedLanguage]=useState("English")
     const languages=["English","Russian"]
     return (
-        <div className="max-w-[1440px] mx-auto max-h-[740px] w-full h-screen px-[9rem] bg-cover bg-no-repeat bg-center  bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/729ce5c2-d831-436a-8c9d-f38fea0b99b3/web/AZ-en-20241209-TRIFECTA-perspective_a09d6162-5992-4ec3-a2b8-9081ca80c5b0_large.jpg')] bg-black/75 bg-blend-overlay ">
+        <div className=" mx-auto max-h-[740px] w-full h-screen px-[9rem] bg-cover bg-no-repeat bg-center  bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/729ce5c2-d831-436a-8c9d-f38fea0b99b3/web/AZ-en-20241209-TRIFECTA-perspective_a09d6162-5992-4ec3-a2b8-9081ca80c5b0_large.jpg')] bg-black/75 bg-blend-overlay ">
             <div className="flex items-center justify-between pt-5">
                 <img className="w-[150px]" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="" />
                 <div className='flex items-center gap-2 h-[35px]  '>

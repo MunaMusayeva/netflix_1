@@ -28,8 +28,8 @@ const ReasonsToJoin = () => {
     ]
   return (
     <>
-    <h2 className="  px-[9rem] text-white text-[24px] font-medium mb-4 max-w-[1440px] mx-auto">More Reasons to Join</h2>
-    <div className="flex gap-4 max-w-[1440px] mx-auto  px-[9rem] ">
+    <h2 className="  px-[9rem] text-white text-[24px] font-medium mb-4  mx-auto">More Reasons to Join</h2>
+    <div className="flex gap-4  mx-auto  px-[9rem] ">
         
         {items.map(item=> <ReasonCard item={item}/>)}
     </div>
