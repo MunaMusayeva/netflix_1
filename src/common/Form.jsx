@@ -2,7 +2,7 @@ import FormInput from "../common/FormInput"
 import { useEffect, useState } from "react"
 
 
-const Form = ({ headerText, setFormData, formItems, formButtons, formStyle = "flex flex-col pt-12 gap-5 max-w-[400px] mx-auto" }) => {
+const Form = ({ headerText, setFormData, formItems, formButtons, formStyle = "flex flex-col  pt-12 gap-5 max-w-[400px] mx-auto" }) => {
 
     const handleInputChange = (name, value) => {
         setFormData(prevState => ({

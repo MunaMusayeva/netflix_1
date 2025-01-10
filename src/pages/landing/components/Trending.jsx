@@ -3,6 +3,7 @@ import MovieCard from './MovieCard'
 import CustomSelect from './CustomSelect'
 import Modal from './Modal'
 import ScrollButton from '../../../common/ScrollButton'
+import ScrollButtonTrending from '../../../common/ScrollButtonTrending'
 
 
 const Trending = () => {
@@ -48,15 +49,17 @@ const Trending = () => {
                 <CustomSelect selectedOption={selectedOption} setSelectedOption={setSelectedOption} options={options} />
 
               
+                
+                <ScrollButtonTrending direction="left" />
                 <div id="movie-card-container" className='w-full flex  py-5 pl-7 relative  overflow-x-scroll gap-12 no-scrollbar'>
-                <ScrollButton direction="left" />
                     {data.map((item, index) =>
                         <div key={index} onClick={() => handleCardClick(item)}>
                             <MovieCard className='' setItem={setItem} item={item} index={index} />
                         </div>
                     )}
-                <ScrollButton direction="right" />
-                </div>
+                    </div>
+                <ScrollButtonTrending direction="right" />
+                
                 
 
 

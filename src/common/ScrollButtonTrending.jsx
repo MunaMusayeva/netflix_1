@@ -2,7 +2,7 @@ import chevronRight from "icons/chevron-right.svg"
 import chevronLeft from "icons/chevron-left.svg"
 
 
-const ScrollButton = ({ direction }) => {
+const ScrollButtonTrending = ({ direction }) => {
     const toRight = direction === "right"
 
     return (
@@ -12,7 +12,7 @@ const ScrollButton = ({ direction }) => {
                     .querySelector("#movie-card-container")
                     .scrollBy({ left: toRight ? 220 : -220, behavior: "smooth" })
             }
-            className={`z-10 absolute ${toRight ? "-right-12" : "-left-7"} top-32 hidden md:flex items-center justify-center bg-zinc-900 h-28
+            className={`z-10 absolute ${toRight ? "-right-[-200px]" : "-left-[-200px]"} top-[1000px] hidden md:flex items-center justify-center bg-zinc-900 h-28
             hover:bg-zinc-800  duration-200 p-2 rounded-full`}
         >
             <img src={toRight ? chevronRight : chevronLeft} alt="" />
@@ -20,4 +20,4 @@ const ScrollButton = ({ direction }) => {
     )
 }
 
-export default ScrollButton
+export default ScrollButtonTrending

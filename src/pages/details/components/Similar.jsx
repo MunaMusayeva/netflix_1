@@ -28,9 +28,9 @@ const Similar = ({ id, type }) => {
   }, [type, id])
 
   return (
-    <div className="mt-10 w-full px-[40px] bg-white h-[300px]">
+    <div className="mt-10 w-full px-[40px]  h-[300px]">
       <h2 className="text-white text-2xl mb-3">Similar {type === "tv" ? "TV Shows" : "Movies"}</h2>
-      <div className="relative w-full bg-red-500">
+      <div className="relative w-full b">
         <ScrollButton direction="left" />
         <div id="movie-card-container" className="w-full flex overflow-x-scroll gap-4 no-scrollbar">
           {data.map(item => <Card item={item} type={type} />)}

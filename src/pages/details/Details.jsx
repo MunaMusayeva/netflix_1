@@ -40,7 +40,7 @@ const { id, type } = location.state || {};
       const data = await response.json()
       console.log(data)
       if (response.ok) {
-        setTrailersData(data.trailers[0])
+        setTrailersData(data.trailers)
       }
     } catch (error) {
       console.error(error)
@@ -56,7 +56,7 @@ const { id, type } = location.state || {};
   return (
     
     <div className='pb-10'>
-      <iframe className='w-[800px] h-[400px] mx-auto' src={`https://www.youtube.com/embed/${trailersData.key}`} frameborder="0"></iframe>
+      <iframe className='w-[800px] h-[400px] mx-auto' src={`https://www.youtube.com/embed/${trailersData[0]?.key}`} frameborder="0"></iframe>
       <div className='p-10'>
         <h1 className='text-white text-4xl'>{detailsData.name ? detailsData.name : detailsData.title}</h1>
         <div className='flex items-center gap-3 my-5'>

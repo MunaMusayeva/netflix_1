@@ -71,7 +71,7 @@ const Login = () => {
 
     return (
         <>
-        <div className=" relative  mx-auto  w-full h-screen flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center  bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/729ce5c2-d831-436a-8c9d-f38fea0b99b3/web/AZ-en-20241209-TRIFECTA-perspective_a09d6162-5992-4ec3-a2b8-9081ca80c5b0_large.jpg')] bg-black/50 bg-blend-overlay ">
+        <div className=" relative  mx-auto  w-full h-screen flex items-center justify-center bg-cover bg-no-repeat bg-center  bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/729ce5c2-d831-436a-8c9d-f38fea0b99b3/web/AZ-en-20241209-TRIFECTA-perspective_a09d6162-5992-4ec3-a2b8-9081ca80c5b0_large.jpg')] bg-black/50 bg-blend-overlay ">
             <img className=" absolute top-[24px] left-[168px]  w-[150px]" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="" />
             <Form
                 headerText={
@@ -83,10 +83,10 @@ const Login = () => {
                 formItems={formItems}
                 formButtons={formButtons}
                 setFormData={setFormData}
-                formStyle="w-[450px] h-[470px] mb-[200px] bg-black/70 px-[68px] pt-[48px] flex flex-col gap-4 rounded-[4px] " />
-  <LoginSignupFooter/> 
+                formStyle="w-[450px] h-[470px]  bg-black/70 px-[68px] pt-[48px] flex flex-col gap-4 rounded-[4px] " />
+
         </div>
-      
+        <LoginSignupFooter/> 
       
         </>
         

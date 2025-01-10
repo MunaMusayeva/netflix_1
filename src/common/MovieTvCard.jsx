@@ -1,6 +1,7 @@
+
 import { useNavigate } from "react-router";
 
-const Card = ({ item, type }) => {
+const MovieTvCard= ({ item, type }) => {
   const navigate = useNavigate();
   return (
     <button onClick={() => {
@@ -10,9 +11,9 @@ const Card = ({ item, type }) => {
           type: type ? type : item.media_type,
         },
       });
-    }} className="relative  m-5 w-[300px] rounded-lg  hover:scale-110 transition duration-150 ease-in group">
+    }} className="relative  m-5 w-[150px] rounded-lg  hover:scale-110 transition duration-150 ease-in group">
       <img
-        className=" min-w-[250px] h-[350px] hover:scale-110 rounded-lg transition duration-150 ease-in-out"
+        className=" min-w-[240px] h-[300px] hover:scale-110 rounded-lg transition duration-150 ease-in-out"
         src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
         alt=""
       />
@@ -20,7 +21,7 @@ const Card = ({ item, type }) => {
   );
 };
 
-export default Card;
+export default MovieTvCard;
 
 
 

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import Card from "common/Card";
+import MovieTvCard from "../../../common/MovieTvCard";
+
 const Movies = ({data}) => {
   return (
     
@@ -9,7 +10,7 @@ const Movies = ({data}) => {
     >
       <div className="grid grid-cols-5 px-[90px] pt-[120px] gap-10">
         {data.map((item) => (
-          <Card item={item} />
+          <MovieTvCard item={item} />
         ))}
       </div>
      </motion.div>
